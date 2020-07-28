@@ -1,12 +1,6 @@
-title: Should it be YYYY-MM-DD or YYYY-DD-MM? My Thoughts
-date: 2013-08-27
+title: An example post
+date: 7/11/18
+tags: markdown, flask
+summary: In this post we show what a post looks like.
 
-American-style dates, I know, I know. Here you can write markdown code, including *italics* and **bold**
-
-You can have:
-* Lists
-* More Lists
-
-> And block quotes
-
-    And event highlighted code if you indent :)
+Blog post content begings here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
