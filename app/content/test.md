@@ -1,5 +1,5 @@
 title: An example post
-date: 7/11/18
+date: 2020-07-23
 tags: markdown, flask
 summary: In this post we show what a post looks like.
 

@@ -1,3 +1,5 @@
+from app.supporting_functions import md_to_html
+
 class Post:
     def __init__(self, title, date, summary, href, md_content):
         self.title = title
