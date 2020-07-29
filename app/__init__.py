@@ -6,7 +6,7 @@ from app.assets import parse_markdown_post
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/blog')
 def index():
     posts = []
     content_path = os.path.join(app.root_path, 'content')
@@ -16,10 +16,20 @@ def index():
             continue
         else:
             full_path = os.path.join(content_path, file)
-            posts.append(parse_markdown_post(full_path))
+            post = parse_markdown_post(full_path)
+            posts.append(post)
+            if file != post.title.lower()+'.md':
+                new_file = post.title.lower()+'.md'
+                os.rename(full_path, os.path.join(content_path, new_file))
     sorted_posts = sorted(
         posts,
         key=lambda x:datetime.datetime.strptime(x.date, '%Y-%m-%d'),
         reverse=True
     )
     return render_template('index.html', posts=sorted_posts)
+
+@app.route('/blog/<post_title>')
+def blogpost(post_title):
+    md_path = os.path.join(app.root_path, 'content', f'{post_title}.md')
+    post = parse_markdown_post(md_path)
+    return render_template('blogpost.html', post=post)
