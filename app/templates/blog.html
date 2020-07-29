@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div>
+                <h1 class="text-center" id="blog-title">
+                    {{ post.title }}
+                </h1>
+                <p class="text-center">
+                    Published on {{ post.date }}
+                </p>
+                <div>
+                    {{ post.html_content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
