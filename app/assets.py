@@ -19,6 +19,8 @@ def parse_markdown_post(md_path):
         return None
     blog_pattern = re.compile(r'title: (?P<title>[^\n]*)\sdate: (?P<date>\d{4}-\d{2}-\d{2})\ssummary: (?P<summary>[^\n]*)')
     match_obj = re.match(blog_pattern, markdown)
+    if match_obj is None:
+        return None
     title = match_obj.group('title')
     date = match_obj.group('date')
     summary = match_obj.group('summary')
