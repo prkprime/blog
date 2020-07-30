@@ -32,4 +32,10 @@ def index():
 def blogpost(post_title):
     md_path = os.path.join(app.root_path, 'content', f'{post_title}.md')
     post = parse_markdown_post(md_path)
+    if post == None:
+        return render_template('404.html')
     return render_template('blogpost.html', post=post)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html')

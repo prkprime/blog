@@ -12,8 +12,11 @@ class Post:
         self.html_content = md_to_html(md_content)
 
 def parse_markdown_post(md_path):
-    with open(md_path, 'r') as f:
-        markdown = f.read()
+    try:
+        with open(md_path, 'r') as f:
+            markdown = f.read()
+    except FileNotFoundError:
+        return None
     blog_pattern = re.compile(r'title: (?P<title>[^\n]*)\sdate: (?P<date>\d{4}-\d{2}-\d{2})\ssummary: (?P<summary>[^\n]*)')
     match_obj = re.match(blog_pattern, markdown)
     title = match_obj.group('title')
