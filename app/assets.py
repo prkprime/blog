@@ -41,7 +41,7 @@ def parse_markdown_post(md_path):
     '''
     link for clog is created by replacing whitespaces in the title of blog
     '''
-    href = '/blog/'+title.lower().replace(' ', '-')
+    href = title.lower().replace(' ', '-')
     md_content = re.split(blog_pattern, markdown)[-1]
     return Post(title, date, summary, href, md_content)
 

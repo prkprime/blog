@@ -6,7 +6,7 @@ from app.assets import parse_markdown_post
 
 app = Flask(__name__)
 
-@app.route('/blog')
+@app.route('/')
 def index():
     posts = []
     content_path = os.path.join(app.root_path, 'content')
@@ -51,7 +51,7 @@ def index():
     )
     return render_template('index.html', posts=sorted_posts)
 
-@app.route('/blog/<post_title>')
+@app.route('/<post_title>')
 def blogpost(post_title):
     md_path = os.path.join(app.root_path, 'content', f'{post_title}.md')
     post = parse_markdown_post(md_path)
