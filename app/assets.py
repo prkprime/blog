@@ -7,17 +7,21 @@ class Post:
     this class stores the bellow mentioned metadata of blogpost,
     markdown and HTML converted content of blog
     '''
-    def __init__(self, title, date, summary, href, md_content):
+    def __init__(self, title, date, summary, href, md_content=None):
         self.title = title
         self.date = date
         self.summary = summary
         self.href = href
         self.md_content = md_content
-        self.html_content = md_to_html(md_content)
+        if md_content == None:
+            self.html_content = None
+        else:
+            self.html_content = md_to_html(md_content)
 
-def parse_markdown_post(md_path):
+def parse_markdown_post(md_path: str, meta=False) -> Post:
     '''
     :param md_path -> path to markdown file
+    :param meta -> set True if you want to retrive only meta data for index page
     :return Object of class Post or None if error occured during parsing
     '''
     try:
@@ -42,10 +46,13 @@ def parse_markdown_post(md_path):
     link for clog is created by replacing whitespaces in the title of blog
     '''
     href = title.lower().replace(' ', '-')
-    md_content = re.split(blog_pattern, markdown)[-1]
-    return Post(title, date, summary, href, md_content)
+    if meta == False:
+        md_content = re.split(blog_pattern, markdown)[-1]
+        return Post(title, date, summary, href, md_content=md_content)
+    else:
+        return Post(title, date, summary, href)
 
-def md_to_html(md_string):
+def md_to_html(md_string: str) -> mistune.Markdown:
     '''
     :param md_string -> content of blog extracted from markdown file
     :return input string converted to HTML

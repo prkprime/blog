@@ -19,7 +19,7 @@ def index():
             continue
         else:
             full_path = os.path.join(content_path, file)
-            post = parse_markdown_post(full_path)
+            post = parse_markdown_post(full_path, meta=True)
             if post is None:
                 '''
                 ignoring markdown files that don't have proper structure
