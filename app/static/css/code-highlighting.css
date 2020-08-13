@@ -7,11 +7,13 @@ https://github.com/jwarby/jekyll-pygments-themes
 
 code {
     background-color: #f4f4f4;
-    color: #202020; }
+    color: #202020;
+}
 pre {
     /* background-color:#333;  */
     border-color:#333;
     color:#202020;
+
 }
 .hll { background-color: #272822; }
 .c { color: #75715e } /* Comment */
@@ -73,7 +75,6 @@ pre {
 .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .vi { color: #f8f8f2 } /* Name.Variable.Instance */
 .il { color: #ae81ff } /* Literal.Number.Integer.Long */
-.gh { } /* Generic Heading & Diff Header */
 .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
