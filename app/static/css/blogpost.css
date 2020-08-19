@@ -58,7 +58,6 @@ cite {
 table,
 td,
 th {
-  margin: 0;
   padding: 0;
   word-wrap: break-word;
 }
@@ -93,4 +92,9 @@ th {
 
 .container {
   padding: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
