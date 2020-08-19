@@ -4,11 +4,9 @@ summary: stuff about NixOS by Omkar Once I was bitching about how no distro work
 
 # Introduction to NixOS 
 
-![Heckerman](https://thescriptgroup.in/images/alok.jpg)
+![Heckerman](https://thescriptgroup.in/images/omkar.jpg)
 
 I have been using Linux as my daily driver on and off for the past few years. Arch Linux and Ubuntu were always the distribution of choice. I used Arch Linux because I liked the rolling release nature and it allowed me to do a lot of things I might not have been able to do easily on Ubuntu. Like using efistub instead of a bootloader and using f2fs filesystem for my root partition. But whenever I was being lazy or needed to introduce my friend to Linux, I would install Ubuntu and debloat it enough to my liking.
-
-![Rendum night sky with stars wallpaper](https://pixabay.com/get/54e6dc464f54a514f6d1867dda35367b1c38d6e352567441_1920.jpg)
 
 However, I had my fair share of issues with both. Every time I did a system upgrade on Arch, I knew there was a slight chance that something is going to break, and I would have to waste my time fixing. (Not that I am blaming arch, that is just the nature of rolling release). My issues on Ubuntu were due to the lack of bleeding edge packages in repository, abandoned PPAs, nothing like AUR and the list goes on.
 
