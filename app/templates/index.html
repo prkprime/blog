@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
 
-    <link rel="stylesheet" href="{{ url_for(endpoint='static', filename='css/index.css') }}">
-</head>
-<body>
+    <!-- material design -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+      integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for(endpoint='static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-primary">
+      <a href="/" class="navbar-brand">Home</a>
+      <a href="https://github.com/prkprime/blog" class="navbar-brand">
+        <img
+          src="{{ url_for(endpoint='static', filename='img/Octocat.png') }}"
+          width="30"
+          height="30"
+          alt="Github Link"
+        />
+      </a>
+    </nav>
     <div class="container">
-        <div>
-            <div>
-                {% for post in posts %}
-                    <div>
-                        <h3>
-                            <a href="{{ post.href }}">
-                                {{ post.title }}
-                            </a>
-                        </h3>
-                        <h5>
-                            {{ post.date }}
-                        </h5>
-                        <p>
-                            {{ post.summary }}
-                        </p>
-                    </div>
-                {% endfor %}
-            </div>
+      <div class="row">
+        <div class="col">
+          {% for post in posts %}
+          <div>
+            <h3>
+              <a href="{{ post.href }}">
+                {{ post.title }}
+              </a>
+            </h3>
+            <h5>
+              {{ post.date }}
+            </h5>
+            <p>
+              {{ post.summary }}
+            </p>
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

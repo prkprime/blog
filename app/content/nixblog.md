@@ -1,10 +1,14 @@
 title: nixblog
 date: 2020-07-29
-summary: stuff about NixOS by Omkar
+summary: stuff about NixOS by Omkar Once I was bitching about how no distro works good and how native Windows with WSL2 works simply fine, I was suggested NixOS. NixOS is a Linux distribution which follows the rolling release pattern but has a unique package management and system configuration. Being the distro-hopper I am, I wiped my Windows and installed NixOS. In this blog, I will guide you through my journey using NixOS
 
 # Introduction to NixOS 
 
+![Heckerman](https://thescriptgroup.in/images/alok.jpg)
+
 I have been using Linux as my daily driver on and off for the past few years. Arch Linux and Ubuntu were always the distribution of choice. I used Arch Linux because I liked the rolling release nature and it allowed me to do a lot of things I might not have been able to do easily on Ubuntu. Like using efistub instead of a bootloader and using f2fs filesystem for my root partition. But whenever I was being lazy or needed to introduce my friend to Linux, I would install Ubuntu and debloat it enough to my liking.
+
+![Rendum night sky with stars wallpaper](https://pixabay.com/get/54e6dc464f54a514f6d1867dda35367b1c38d6e352567441_1920.jpg)
 
 However, I had my fair share of issues with both. Every time I did a system upgrade on Arch, I knew there was a slight chance that something is going to break, and I would have to waste my time fixing. (Not that I am blaming arch, that is just the nature of rolling release). My issues on Ubuntu were due to the lack of bleeding edge packages in repository, abandoned PPAs, nothing like AUR and the list goes on.
 
@@ -17,13 +21,13 @@ So I went to the NixOS download page. I downloaded the latest unstable live ISO 
 I partitioned my disk and formatted it accordingly with root, home, swap, and boot and mounted them at /mnt. Now this is where things got interesting. I opened the NixOS installation part from the wiki here. And I realised that even though it is a Graphical Live ISO, it doesn’t have a graphical installer, and it does not use your standard package manager. Like apt, dnf and pacman sure have different syntaxes but they function predictably. You must generate a sample config by using 
 
 ```bash
-# nixos-generate-config --root /mnt
+nixos-generate-config --root /mnt
 ```
 
 You should not touch the hardware-config. So, all you have to edit is the `configuration.nix` located in
 
 ```bash
-# nano /mnt/etc/nixos/configuration.nix
+nano /mnt/etc/nixos/configuration.nix
 ```
 
 Here is a [link](https://del.dog/gotenksnixos) to what I use (I will be updating it as I modify it).
@@ -31,7 +35,7 @@ Here is a [link](https://del.dog/gotenksnixos) to what I use (I will be updating
 Once you are done with the config, enter
 
 ```bash
-# nixos-install
+nixos-install
 ```
 
 to start the installation. You can use nixos-enter to chroot into the system to set the password to the user you created in the configuration. Reboot once you are done. If all goes well, you will be booted in NixOS.
@@ -56,7 +60,7 @@ So, the first thing I always do upon booting the distro for the first time is se
 to your user in the `configuration.nix`. Every time you want to update your system after changing `configuration.nix`, run
 
 ```bash
-# nixos-rebuild <switch/boot>
+nixos-rebuild <switch/boot>
 ```
 
 ,where switch will change it instantly while boot will set it as next boot. I felt the boot time a bit too slow in the beginning, hence, I switched from dhcpcd and GDDM to Network-Manager and LightDM respectively. You can refer to the config I shared above in the installation section to know what I did change in `configuration.nix`. Afterwards I switched to the latest testing kernel by adding
