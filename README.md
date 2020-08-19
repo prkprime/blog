@@ -2,6 +2,14 @@
 
 This is Markdown Blogging Website created using Python3, Flask and mistune
 
+This website is deployed [here](https://prk-blogs.herokuapp.com) (It might not be online sometimes so check bellow screenshots instead)
+
+## Screenshots
+
+![Index Page screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/index-screenshot.png)
+
+![Blog Page Screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/blogpage-screenshot.png)
+
 ## Steps to run the website
 
 1. Clone the repo and go to root directory of project
@@ -61,3 +69,4 @@ This is Markdown Blogging Website created using Python3, Flask and mistune
 
 - I created this project only with libraries that I can understand for improving my own skills (well i googled most of the stuff. especially for css stuff cause I ain't frontend guy)
 - There are many different ways and many different libraries to create markdown blogging website and there are tons of different implementations available on github which are far more better than mine so if you want to learn, I'll suggest you to check them out
+- I have added some samples in app/content for testing purpose so you don't have to write something to test this app
