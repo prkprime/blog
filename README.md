@@ -4,6 +4,14 @@ This is Markdown Blogging Website created using Python3, Flask and mistune
 
 This website is deployed [here](https://prk-blogs.herokuapp.com) (It might not be online sometimes so check bellow screenshots instead)
 
+## Table of Contents
+
+- [Screenshots](#screenshots)
+- [Project Structure](#project-structure)
+- [Steps to run the website](#steps-to-run-the-website)
+- [Adding your own blogs](#adding-your-own-blogs)
+- [Notes](#notes)
+
 ## Screenshots
 
 ![Index Page screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/index-screenshot.png)
