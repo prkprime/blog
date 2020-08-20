@@ -1,5 +1,5 @@
-title: nixblog
-date: 2020-07-29
+title: Introduction To NixOS
+date: 2020-08-30
 summary: stuff about NixOS by Omkar Once I was bitching about how no distro works good and how native Windows with WSL2 works simply fine, I was suggested NixOS. NixOS is a Linux distribution which follows the rolling release pattern but has a unique package management and system configuration. Being the distro-hopper I am, I wiped my Windows and installed NixOS. In this blog, I will guide you through my journey using NixOS
 
 # Introduction to NixOS 

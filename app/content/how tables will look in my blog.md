@@ -1,5 +1,5 @@
-title: test
-date: 2020-07-29
+title: How tables will look in my blog
+date: 2020-06-13
 summary: testing something
 
 
