@@ -2,7 +2,7 @@
 
 This is Markdown Blogging Website created using Python3, Flask and mistune
 
-This website is deployed [here](https://prk-blogs.herokuapp.com) (It might not be online sometimes so check bellow screenshots instead)
+This website is deployed on heroku [here](https://prk-blogs.herokuapp.com) (It might not be online sometimes so check bellow screenshots instead)
 
 ## Table of Contents
 
