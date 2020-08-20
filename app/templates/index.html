@@ -57,18 +57,20 @@
       <div class="row">
         <div class="col">
           {% for post in posts %}
-          <div>
-            <h3>
-              <a href="{{ post.href }}">
-                {{ post.title }}
-              </a>
-            </h3>
-            <h5>
-              {{ post.date }}
-            </h5>
-            <p>
-              {{ post.summary }}
-            </p>
+          <div class="card bg-light border-light m-2">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="{{ post.href }}">
+                  {{ post.title }}
+                </a>
+              </h3>
+              <p class="card-text">
+                {{ post.summary }}
+              </p>
+              <small>
+                {{ post.date }}
+              </small>
+            </div>
           </div>
           {% endfor %}
         </div>
