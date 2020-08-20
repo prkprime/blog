@@ -53,7 +53,7 @@ def index():
 
 @app.route('/<post_title>')
 def blogpost(post_title):
-    md_path = os.path.join(app.root_path, 'content', f'{post_title}.md')
+    md_path = os.path.join(app.root_path, 'content', f'{post_title.replace("-"," ")}.md')
     post = parse_markdown_post(md_path)
     if post is None:
         '''
