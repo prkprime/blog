@@ -8,7 +8,47 @@ This website is deployed [here](https://prk-blogs.herokuapp.com) (It might not b
 
 ![Index Page screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/index-screenshot.png)
 
-![Blog Page Screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/blogpage-screenshot.png)
+<!-- ![Blog Page Screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/blogpage-screenshot.png) -->
+
+## Project Structure
+
+```
+|-- blog
+    |
+    |-- app
+    |   |
+    |   |-- content - stores markdown blogs
+    |   |
+    |   |-- static - stores static files
+    |   |   |-- css - static css files for webpages
+    |   |   |-- img - static images used in project
+    |   |   |-- js - javascript files (i haven't used any but if you do, store them here)
+    |   |
+    |   |-- templates - html webpages (Flask app directly picks html file from this directory
+    |   |       so you don't have to mention the pathname in code)
+    |   |
+    |   |-- __init__.py - contains code for creating and seeting flask app
+    |   |       View functions for pages like index and blogpost etc.
+    |   |       It also makes the app module importable
+    |   |
+    |   |-- __main__.py - contains code for starting the flask application
+    |   |       It also makes the module executable and executes this file when imported
+    |   |
+    |   |-- assets.py - helping class and functions for parsing markdown and converting to html
+    |   |
+    |   |-- highlightrenderer.py - custom renderer to parse code blocks in markdown
+    |
+    |-- requirements.txt - list of python packages used for quick installation
+    |
+    |-- Procfile - declares the worker type for deploying on Heroku
+    |
+    |-- README.md - current file you are reading
+    |
+    |-- LICENSE - Licence of the project (MIT LICENSE in this project)
+    |
+    |-- .gitignore - list of files/folders to ignore in git
+```
+
 
 ## Steps to run the website
 
