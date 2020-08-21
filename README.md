@@ -16,7 +16,7 @@ This website is deployed on heroku [here](https://prk-blogs.herokuapp.com) (It m
 
 ![Index Page screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/index-screenshot.png)
 
-<!-- ![Blog Page Screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/blogpage-screenshot.png) -->
+![Blog Page Screenshot](https://raw.githubusercontent.com/prkprime/blog/master/app/static/img/blogpage-screenshot.png)
 
 ## Project Structure
 
